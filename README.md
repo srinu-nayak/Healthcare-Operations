@@ -17,8 +17,8 @@ This dashboard was developed to provide a "single source of truth" for waiting l
 - Which medical specialties and patient age profiles represent the largest bottlenecks?
 - What is the difference between $Average$ and $Median$ wait times, and what does this discrepancy reveal about outliers?
 
-An interactive PowerBI dashboard can be downloaded here <a href="https://app.powerbi.com/view?r=eyJrIjoiNGU4YmQ0NzQtNTUzNS00OTViLWE5ZDEtODVjZjYwNTE2ZGI5IiwidCI6IjFiMTRiNGZmLTMxMWUtNGEyMC1iM2NjLTM0ZGZhNzAxMDI2ZCJ9">Link<a/>
-Dataset can be downloaded here <a href="https://github.com/srinu-nayak/Healthcare-Operations/blob/main/Data-Mapping-Bg.zip">Dataset<a/>
+- An interactive PowerBI dashboard can be downloaded here <a href="https://app.powerbi.com/view?r=eyJrIjoiNGU4YmQ0NzQtNTUzNS00OTViLWE5ZDEtODVjZjYwNTE2ZGI5IiwidCI6IjFiMTRiNGZmLTMxMWUtNGEyMC1iM2NjLTM0ZGZhNzAxMDI2ZCJ9">Link<a/>
+- Dataset can be downloaded here <a href="https://github.com/srinu-nayak/Healthcare-Operations/blob/main/Data-Mapping-Bg.zip">Dataset<a/>
 
 # Data Structure Overview
 The dataset consists of multiple CSV files sourced from two main folders: Inpatient and Outpatient. These files represent monthly snapshots of the waiting list from 2018-2021. In Power BI, these files were combined into a single fact table, All_Data. A separate dimension table, Specialty Mapping, was introduced to aggregate granular medical specialties into high-level, manageable groups for analysis.
@@ -38,7 +38,7 @@ This dashboard provides a consolidated view of patient waiting lists, revealing 
 Below is the overview from the Power BI Dashboard and more example are included throughtout the report. The entire dashboard can be downloaded here - <a href="https://app.powerbi.com/view?r=eyJrIjoiNGU4YmQ0NzQtNTUzNS00OTViLWE5ZDEtODVjZjYwNTE2ZGI5IiwidCI6IjFiMTRiNGZmLTMxMWUtNGEyMC1iM2NjLTM0ZGZhNzAxMDI2ZCJ9">Link<a/>
 
 
-### Insights Deep Dive: Patient Wait List Analysis (Jan 2018 - Mar 2021)
+### Insights Deep Dive
 
 **Insight 1: A&E Has Disproportionately High Wait Times**
 
