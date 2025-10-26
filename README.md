@@ -38,23 +38,19 @@ Below is the overview from the Power BI Dashboard and more example are included 
 
 Based on your instructions and the [data in the Power BI report](https://app.powerbi.com/view?r=eyJrIjoiNGU4YmQ0NzQtNTUzNS00OTViLWE5ZDEtODVjZjYwNTE2ZGI5IiwidCI6IjFiMTRiNGZmLTMxMWUtNGEyMC1iM2NjLTM0ZGZhNzAxMDI2ZCJ9) you are viewing, here is an "Insights Deep Dive" for this Patient Wait List Summary.
 
-***
-
 ### Insights Deep Dive: Patient Wait List Analysis (Jan 2018 - Mar 2021)
 
-This section provides a detailed breakdown of the key trends observed in the patient waitlist data.
+**Insight 1: A&E Has Disproportionately High Wait Times**
 
-**1. Overall Waitlist Is Growing, Driven by Outpatient Services**
+* **Observation:** Accident & Emergency wait times are a major outlier compared to all other specialties.
+* **Analysis:** A&E's wait metric (**69.50**) is more than double the next highest, Dermatology (**35.00**), indicating a severe and specific service bottleneck.
 
-* **Quantified Finding:** The total waitlist has seen significant growth. The "Last Month Wait List" (as of March 2021) stands at 709K, a notable increase from the "PY Last Month Wait List" of 640K.
-* **The Story:** This growth is not a sudden event but a steady upward trend, as shown in the "Monthly Trend Analysis" chart. The driving force behind this increase is overwhelmingly from "Outpatient" services, which make up 74.36% of all cases. The Outpatient waitlist grew from approximately 0.50M in mid-2018 to 0.63M by early 2021. In contrast, the waitlist for Inpatient/Day Cases has remained relatively flat and low (hovering between 46K and 62K) over the same period.
+**Insight 2: Working-Age Adults Dominate All Wait Time Bands**
 
-**2. Accident & Emergency Has a Disproportionately High Wait Time**
+* **Observation:** The "16-64" age group is the largest demographic on the waitlist, regardless of wait duration.
+* **Analysis:** This group is the most affected across *all* time bands, from "0-3 Months" (**34 units**) to "18+ Months," making them the most impacted demographic overall.
 
-* **Quantified Finding:** In the "Top 5 Specialty" chart (likely sorted by wait time), Accident & Emergency has the highest metric at 69.50. This is more than double the next-highest specialty, Dermatology (35.00), and significantly higher than Cardiology (28.00) and Pain Relief (27.00).
-* **The Story:** The data indicates a critical bottleneck specifically within the Accident & Emergency specialty. While other departments have waitlists, the metric for A&E is an extreme outlier, suggesting a severe imbalance between patient demand and service capacity compared to other specialties.
+**Insight 3: Overall Waitlist Shows Significant Year-Over-Year Growth**
 
-**3. Working-Age Adults (16-64) Dominate All Wait Time Bands**
-
-* **Quantified Finding:** The "16-64" age group (dark blue bar) is the largest demographic on the waitlist across every single time band. For example, in the "0-3 Months" wait band, this group (34 units) is significantly larger than the "65+" group (21 units) and the "0-15" group (6 units).
-* **The Story:** As seen in the "Time band vs Age Profile" chart, working-age adults consistently form the largest portion of the waitlist. This pattern holds true not only for new additions to the list (0-3 months) but also for those with the longest waits (18+ months), indicating this demographic is the most heavily impacted by wait times overall.
+* **Observation:** The total patient backlog is significantly higher than it was at the same time last year.
+* **Analysis:** The "Last Month Wait List" of **709K** is a notable increase from the "PY Last Month Wait List" of **640K**, confirming clear year-over-year growth.
