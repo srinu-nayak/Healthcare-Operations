@@ -1,5 +1,4 @@
 # Healthcare Operations: Patient Waiting List & Trend Analysis Dashboard
-### Interactive Dashboard Link: <a><a/>
 
 ### Tools Used
 - Data Extraction: Power BI Folder Connector, Excel/CSV
@@ -17,6 +16,9 @@ This dashboard was developed to provide a "single source of truth" for waiting l
 - What are the historical monthly trends in waiting list volume, and how do they compare year-over-year?
 - Which medical specialties and patient age profiles represent the largest bottlenecks?
 - What is the difference between $Average$ and $Median$ wait times, and what does this discrepancy reveal about outliers?
+
+An interactive PowerBI dashboard can be downloaded here <a href="https://app.powerbi.com/view?r=eyJrIjoiNGU4YmQ0NzQtNTUzNS00OTViLWE5ZDEtODVjZjYwNTE2ZGI5IiwidCI6IjFiMTRiNGZmLTMxMWUtNGEyMC1iM2NjLTM0ZGZhNzAxMDI2ZCJ9">Link<a/>
+Dataset can be downloaded here <a href="https://github.com/srinu-nayak/Healthcare-Operations/blob/main/Data-Mapping-Bg.zip">Dataset<a/>
 
 # Data Structure Overview
 The dataset consists of multiple CSV files sourced from two main folders: Inpatient and Outpatient. These files represent monthly snapshots of the waiting list from 2018-2021. In Power BI, these files were combined into a single fact table, All_Data. A separate dimension table, Specialty Mapping, was introduced to aggregate granular medical specialties into high-level, manageable groups for analysis.
@@ -36,8 +38,6 @@ This dashboard provides a consolidated view of patient waiting lists, revealing 
 Below is the overview from the Power BI Dashboard and more example are included throughtout the report. The entire dashboard can be downloaded here - <a href="https://app.powerbi.com/view?r=eyJrIjoiNGU4YmQ0NzQtNTUzNS00OTViLWE5ZDEtODVjZjYwNTE2ZGI5IiwidCI6IjFiMTRiNGZmLTMxMWUtNGEyMC1iM2NjLTM0ZGZhNzAxMDI2ZCJ9">Link<a/>
 
 
-Based on your instructions and the [data in the Power BI report](https://app.powerbi.com/view?r=eyJrIjoiNGU4YmQ0NzQtNTUzNS00OTViLWE5ZDEtODVjZjYwNTE2ZGI5IiwidCI6IjFiMTRiNGZmLTMxMWUtNGEyMC1iM2NjLTM0ZGZhNzAxMDI2ZCJ9) you are viewing, here is an "Insights Deep Dive" for this Patient Wait List Summary.
-
 ### Insights Deep Dive: Patient Wait List Analysis (Jan 2018 - Mar 2021)
 
 **Insight 1: A&E Has Disproportionately High Wait Times**
@@ -54,3 +54,41 @@ Based on your instructions and the [data in the Power BI report](https://app.pow
 
 * **Observation:** The total patient backlog is significantly higher than it was at the same time last year.
 * **Analysis:** The "Last Month Wait List" of **709K** is a notable increase from the "PY Last Month Wait List" of **640K**, confirming clear year-over-year growth.
+
+<img width="1531" height="866" alt="image" src="https://github.com/user-attachments/assets/387d85e9-e0c4-4fa9-a942-bc0f50e0660a" />
+
+# Recommendation Section
+[Recommendation 1] Conduct Process Review for Outpatient Intake
+- Direct the Operational Excellence team to perform a deep-dive analysis on the end-to-end Outpatient journey, from referral to first appointment. This directly addresses the 24% YoY growth in the Outpatient waitlist, which is the primary driver of total volume. Identifying and resolving an intake or scheduling bottleneck could stabilize this trend.
+
+[Recommendation 2] Re-allocate Resources to 'Surgical Specialties'
+- Recommend that the Resource Planning committee review staffing, theater (OR), and clinic availability for the 'Surgical Specialties' group.This specialty group is the largest bottleneck (31% of total) and contributes significantly to the long-wait outliers. Targeted resource allocation here will have the greatest impact on reducing the overall backlog.
+
+[Recommendation 3] Implement a Validation Initiative for Long-Wait Patients
+- Use the dashboard's "Detailed View" page to export a list of all patients waiting over 18 months. Initiate a clinical and administrative review to validate their status, confirm they still require treatment, and identify any data-entry errors. This cleans the data and addresses the high-risk cohort identified by the Average vs. Median analysis, reducing patient risk and ensuring the waitlist reflects true demand.
+
+# Caveats and Assumptions 
+### Limitations
+- The analysis is based on monthly data snapshots; it does not capture intra-month volatility or the "flow" of patients on and off the list.
+- The dataset does not include patient priority or clinical urgency, which is a critical missing variable for true risk-based prioritization.
+- 'Specialty' groupings are high-level and may mask significant variation within a single group (e.g., different types of surgery).
+
+### Future Work
+- Integrate a 'Clinical Urgency' score to create a risk-weighted waiting list dashboard.
+- Develop a forecasting model to project waitlist volume for the next 3-6 months based on historical trends and seasonality.
+- Transition the data pipeline from a manual folder/CSV refresh to a direct connection with the production EMR/EHR database for real-time reporting.
+
+# Repository Structure
+├── data/
+│   ├── inpatient.csv
+│   ├── outpatient.csv
+│   └── specialty_mapping.csv
+├── scripts/
+│   ├── data_cleaning.py
+│   ├── dax_measures.txt
+├── documentation/
+│   ├── README.md
+│   ├── caveats_and_future_work.md
+│  
+├── .gitignore
+└── LICENSE
