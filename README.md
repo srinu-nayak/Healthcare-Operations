@@ -24,3 +24,14 @@ The dataset consists of multiple CSV files sourced from two main folders: Inpati
 ### Entity Relationship Diagram (ERD):
 <img width="993" height="676" alt="image" src="https://github.com/user-attachments/assets/7b59c4d1-4620-4bb6-a365-9d5ef695f3ed" />
 The ERD visualizes key tables: All_Data (merged patient records), Specialty_Mapping (grouped specialties), showing primary relationships on Specialty_Name. This structure ensures efficient cross-filtering and dynamic reporting across all relevant attributes.
+
+# Analysis Process / Methodology
+- Data Cleaning (Power Query): Standardized column names across all source files (e.g., Specialty_Name aligned to Specialty). Categorical data in Age_Profile and Time_Band columns was cleaned by replacing redundant values (e.g., "18+ months" vs. "18 month +") and trimming trailing white spaces.
+- Data Transformation (Power Query): Engineered a Case_Type column during the import process to tag records as "Inpatient" or "Outpatient." Appended the two distinct data streams into a single unified fact table, All_Data, to facilitate holistic analysis.
+- DAX Measures: Developed key measures to compare current vs. historical performance, such as Latest Month Wait List and PY Latest Month Wait List. Implemented a SWITCH-based measure to dynamically toggle all dashboard visuals between $Average$ and $Median$ wait times, driven by a disconnected slicer table for enhanced analytical flexibility.
+
+# Executive Summary
+This dashboard provides a consolidated view of patient waiting lists, revealing a total active waitlist of 68,500 patients as of the latest month. Analysis indicates a significant 24% year-over-year increase in the Outpatient waiting list, which now constitutes 72% of the total volume. Surgical Specialties and Diagnostic Services are identified as critical bottlenecks, with median wait times exceeding 18 months. The tool successfully provides leadership with a dynamic, single source of truth for resource planning.
+
+Below is the overview from the Power BI Dashboard and more example are included throughtout the report. The entire dashboard can be downloaded here <a> https://app.powerbi.com/view?r=eyJrIjoiNGU4YmQ0NzQtNTUzNS00OTViLWE5ZDEtODVjZjYwNTE2ZGI5IiwidCI6IjFiMTRiNGZmLTMxMWUtNGEyMC1iM2NjLTM0ZGZhNzAxMDI2ZCJ9 <a/>
+
